@@ -10,9 +10,9 @@ int main() {
 
   std::vector<wchar_t> envBlock;
   envBlock.insert(envBlock.end(), env1.begin(), env1.end());
-  envBlock.push_back(L'\0');  // 各環境変数の終端
+  envBlock.push_back(L'\0');
   envBlock.insert(envBlock.end(), env2.begin(), env2.end());
-  envBlock.push_back(L'\0');  // 各環境変数の終端
+  envBlock.push_back(L'\0');
 
   STARTUPINFOW si = { sizeof(si) };
   PROCESS_INFORMATION pi = { 0 };
